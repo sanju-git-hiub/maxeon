@@ -1,0 +1,57 @@
+.wrapper,
+.banner {
+  height: 100%;
+}
+.wrapper {
+  background-image: url("../../assets/banner.jpg");
+  background-size: cover;
+  background-position-x: 30px;
+  background-repeat: no-repeat;
+}
+.banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.bannerContent {
+  text-align: left;
+  padding-left: 12rem;
+}
+.bannerContent h1 {
+  font-size: 5rem;
+  color: #fff;
+  word-break: break-all;
+  word-spacing: 99999px;
+  line-height: 5rem;
+}
+.backdrop {
+  position: absolute;
+  background: #000;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: -9999;
+  transition: all 0.3s ease-out;
+}
+.backdrop.active {
+  opacity: 0.4;
+  z-index: 5;
+}
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    background-position-x: -500px;
+  }
+  .banner {
+    background: rgb(0 0 0 / 40%);
+  }
+  .bannerContent {
+    padding: 0 15px;
+  }
+  .bannerContent h1 {
+    font-size: 1.5rem;
+    line-height: 30px;
+    text-align: center;
+    word-spacing: 0;
+    word-break: break-word;
+  }
+}

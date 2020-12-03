@@ -1,0 +1,64 @@
+/*-- Chat Bubble --*/
+.chat-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.chat-bubble {
+  position: relative;
+  background-color: #e0e3f0;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 220px;
+  text-align: left;
+  margin-bottom: 25px;
+}
+.chat-bubble::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 20px;
+  border-top: 0 solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 25px solid #e0e3f0;
+  border-bottom-left-radius: 5px;
+}
+.chat-bubble h6 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word;
+}
+.chatimage {
+  width: 30px;
+  height: 30px;
+  background: #4c5aa1;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-top: -15px;
+}
+
+.chatContainer .chat-box.customer {
+  margin-left: auto;
+  margin-right: 15px;
+}
+.chatContainer .chat-box.customer .chat-bubble {
+  background-color: #4c5aa1;
+}
+
+.chatContainer .chat-box.customer h6 {
+  color: #fff;
+}
+.chatContainer .chat-box.customer .chat-bubble::after {
+  right: 0;
+  left: auto;
+  border-top: 0 solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 25px solid #4c5aa1;
+  border-left: 0 solid transparent;
+  border-bottom-left-radius: 5px;
+}

@@ -1,0 +1,94 @@
+.appToolBar {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.appToolBar .innerContent {
+  width: 1100px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  box-sizing: border-box;
+}
+.brandLogo h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+.nav {
+  margin-left: auto;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav ul li {
+  margin: 0 2rem;
+}
+.nav ul li.login {
+  margin: 0 1rem;
+}
+
+.nav ul li > a {
+  color: #ecf1fb;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.5s ease-in-out;
+}
+.nav ul li > a:hover {
+  color: #fff;
+}
+.nav ul li.login > a {
+  background-color: #fff;
+  padding: 0 35px;
+  line-height: 35px;
+  display: inline-block;
+  border-radius: 50px;
+  color: #0c003a;
+  font-weight: bold;
+  font-size: 14px;
+}
+.mob-menu {
+  position: absolute;
+  left: 20px;
+}
+.mob-login {
+  position: absolute;
+  right: 20px;
+}
+.mob-menu button,
+.mob-login button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) and (min-width: 800px) {
+  .appToolBar .innerContent {
+    width: 900px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .appToolBar .innerContent {
+    width: 650px;
+    max-width: 100%;
+  }
+  .nav ul li {
+    margin: 0 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .appToolBar .innerContent {
+    padding: 2rem 1rem;
+    justify-content: center;
+  }
+  .nav {
+    display: none;
+  }
+}
